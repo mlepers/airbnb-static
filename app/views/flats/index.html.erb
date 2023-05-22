@@ -1,0 +1,24 @@
+<div class="container">
+
+<h1>Flats</h1>
+
+  
+
+  <div class="d-flex">
+    <% @flats.each do |flat|  %>
+    <div class="card" style="width: 18rem;">
+      <img src="<%=flat["imageUrl"]%>" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h2 class="card-title"><%= flat["name"] %></h2>
+        <p class="card-text">  <%= flat["price"]%>  <%= flat["priceCurrency"]%> </p>
+      
+      </div>
+    </div>
+    <% end %>  
+  </div>
+</div>
+
+
+
+
+
