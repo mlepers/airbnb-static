@@ -4,6 +4,6 @@ class FlatsTest < ApplicationSystemTestCase
   test "visiting the index" do
     visit "/"
     assert_selector "h1", text: "Flats"
-    assert_selector "h2", text: "Charm at the Steps of the Sacre Coeur/Montmartre"
+    assert_selector "h5", text: "Charm at the Steps of the Sacre Coeur/Montmartre"
   end
 end

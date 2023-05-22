@@ -4,18 +4,25 @@
 
   
 
-  <div class="d-flex">
+    <div class="row">
     <% @flats.each do |flat|  %>
-    <div class="card" style="width: 18rem;">
-      <img src="<%=flat["imageUrl"]%>" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h2 class="card-title"><%= flat["name"] %></h2>
-        <p class="card-text">  <%= flat["price"]%>  <%= flat["priceCurrency"]%> </p>
-      
+  
+      <div class="col-3">
+        <div class="card mb-3" style="width: 18rem;">
+          <img src="<%=flat["imageUrl"]%>" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"><%= flat["name"] %></h5>
+          
+            <%= link_to "More info", flat_path(flat["id"]), class:"btn btn-primary"  %>
+          
+          </div>
+        </div>
       </div>
-    </div>
-    <% end %>  
-  </div>
+
+    <% end %>
+
+    </div>  
+  
 </div>
 
 
